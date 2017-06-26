@@ -118,9 +118,7 @@ function processChatMessage(req, res) {
 // ROUTING METHODS==============
 // =============================
 
-app.get('/index', function (req, res) {
-    res.render('index.html');
-})
+app.get('/', routes.index)
 
 
 

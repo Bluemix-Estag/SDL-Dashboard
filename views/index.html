@@ -2,11 +2,68 @@
 <html>
 
 <head>
-    <title>Title</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+    <link type="text/css" rel="stylesheet" href="/style/stylesheet.css" />
+    <link type="text/css" rel="stylesheet" href="/style/animate.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    Hello world
+    <header>
+        <nav class="blue light-green lighten-5">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo flow-text">
+                    <div class="brand-div"><span class="logo-text black-text">SDL Avatar</span></div>
+                </a>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!--- Collapsible ChatBot-->
+        <div class="transparent chatbox " id="chatbox">
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header " id="chatbox-header" style="text-align: center;"><i class="material-icons">chat</i>ChatBot</div>
+                    <div class="collapsible-body">
+                        <div class="chat-popup" id="chat-popup">
+                            <div class="chat-body" id="chat-body"></div>
+                        </div>
+                        <!-- Footer ChatBot-->
+                        <div class="chat-footer">
+                            <div class="input_field">
+                                <input type="text" id="chatInput" placeholder="  Type your message here..." onkeypress="return newEvent(event)" />
+                            </div>
+                        </div>
+                        <!-- -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!--- End of ChatBot-->
+    </main>
+
+    <footer class="page-footer light-green lighten-5">
+        © 2017 Code Bakery
+    </footer>
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="/scripts/util.js"></script>
+    <script src="/scripts/chat.js"></script>
 </body>
 
 </html>
