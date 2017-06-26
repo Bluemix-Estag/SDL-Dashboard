@@ -1,17 +1,17 @@
 
 $(document).ready(function () {
-    
+
     $('#btn').click(function () {
-         $('#main').removeClass('animate-main-out');
+        $('#main').removeClass('animate-main-out');
         $('#bot').removeClass('animate-bot-out');
         $('#main').addClass('animate-main-in');
         $('#bot').addClass('animate-bot-in');
     })
-     $('#btn-out').click(function () {
-        
+    $('#btn-out').click(function () {
+
         $('#main').removeClass('animate-main-in');
         $('#bot').removeClass('animate-bot-in');
-         $('#main').addClass('animate-main-out');
+        $('#main').addClass('animate-main-out');
         $('#bot').addClass('animate-bot-out');
     })
 })
@@ -25,7 +25,7 @@ function typeWriter(text, i) {
         document.querySelector("h4").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
         setTimeout(function () {
             typeWriter(text, i + 1)
-        }, 100);
+        }, 50);
     }
 }
 
@@ -61,7 +61,14 @@ function userMessage(message) {
             context = response.context; // Store the context for next round of questions
             console.log("Got response from Ana: ", JSON.stringify(response));
 
-            
+
+            if (context.catalog) {
+                $('#main').removeClass('animate-main-out');
+                $('#bot').removeClass('animate-bot-out');
+                $('#main').addClass('animate-main-in');
+                $('#bot').addClass('animate-bot-in');
+            }
+
             for (var txt in text) {
                 displayMessage(text[txt], watson);
             }
@@ -91,7 +98,7 @@ function newEvent(event) {
         if (text) {
             // Display the user's text in the chat box and null out input box
             //            userMessage(text);
-            displayMessage(text, 'user');
+            // displayMessage(text, 'user');
             userInput.value = '';
             userMessage(text);
         } else {
@@ -108,9 +115,9 @@ function displayMessage(text, user) {
     // var bubble = document.createElement('div');
     // bubble.setAttribute("class", "bubble");
     // if (user == "user") {
-        // bubble.className += " user";
+    // bubble.className += " user";
     // } else {
-        // bubble.className += " watson";
+    // bubble.className += " watson";
     // }
     // bubble.innerHTML = text;
     // chat_bo/dy.appendChild(bubble);
