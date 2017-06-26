@@ -2,7 +2,7 @@
     "services": {
         "cloudantNoSQLDB": [
             {
-                "name": "min-saude-cloudantNoSQLDB",
+                "name": "sdl-cloudantNoSQLDB",
                 "label": "cloudantNoSQLDB",
                 "plan": "Lite",
                 "credentials": {

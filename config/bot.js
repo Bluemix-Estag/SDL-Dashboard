@@ -96,7 +96,7 @@ var request = require('request');
 // REQUEST =====================
 // =====================================
 // Allow clients to interact
-var chatbot_acolhimento = {
+var chatbot = {
 sendMessage: function (req, callback) {
     //        var owner = req.user.username;
     buildContextObject(req, function (err, params) {
@@ -129,7 +129,7 @@ sendMessage: function (req, callback) {
                     } else {
 
                         var conv = data.context.conversation_id;
-                        console.log("Got response from Ana: ", JSON.stringify(data));
+                        console.log("Got response from Bot: ", JSON.stringify(data));
                         callback(null, data);
                     }
         });
@@ -188,4 +188,4 @@ function buildContextObject(req, callback) {
     //    }
     return callback(null, params);
 }
-module.exports = chatbot_acolhimento;
+module.exports = chatbot;

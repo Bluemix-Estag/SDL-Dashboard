@@ -90,7 +90,7 @@ h4 {
 
 span {
   border-right: .05em solid;
-  animation: caret 1s steps(1) infinite;
+  animation: caret 2s steps(1) infinite;
 }
 
 @keyframes caret {
@@ -98,3 +98,4 @@ span {
     border-color: transparent;
   }
 }
+

@@ -10,7 +10,7 @@ function userMessage(message) {
         params.context = context;
     }
     var xhr = new XMLHttpRequest();
-    var uri = '/api/watson/triagem';
+    var uri = '/api/watson';
     xhr.open('POST', uri, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function () {

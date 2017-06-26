@@ -98,7 +98,7 @@ function initCloudant() {
 // =====================================
 // WATSON CONVERSATION  ================
 // =====================================
-app.post('/api/watson/triagem', function (req, res) {
+app.post('/api/watson', function (req, res) {
     processChatMessage(req, res);
 }); // End app.post 
 function processChatMessage(req, res) {
