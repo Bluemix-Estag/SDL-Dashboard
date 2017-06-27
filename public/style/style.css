@@ -58,6 +58,11 @@ body{
     width: 100%;
 }
 
+.bot-text{
+    font-style: italic;
+    
+}
+
 
 @keyframes fadeMainIn{
     from{width: 0%;}
