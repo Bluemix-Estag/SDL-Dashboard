@@ -1,53 +1,63 @@
-html,body{
+html,
+body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-      font-family: 'tradegothiclt-bold', sans-serif;
-    
+    font-family: 'tradegothiclt-bold', sans-serif;
 }
-body{
+
+body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url(/images/bg.jpg);
+    background-image: url(/images/bg3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.header , .footer{
+
+.header,
+.footer {
     height: 10%;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
 }
-.main-body{
+
+.main-body {
     height: 100%;
     display: flex;
 }
+
 .animate-main-in {
     animation: fadeMainIn;
 }
-.animate-main-out{
+
+.animate-main-out {
     animation: fadeMainOut;
 }
-.main{
+
+.main {
+    margin-left: 20px;
+    visibility: visible;
     width: 0;
-      background-color: yellow;
-      
+    background-color: rgba(100, 100, 100, 0.67);
     animation-duration: 2s;
     animation-fill-mode: forwards;
+    overflow-y: scroll;
 }
 
-.animate-bot-in{
+.animate-bot-in {
     animation: fadeBotOut;
 }
-.animate-bot-out{
+
+.animate-bot-out {
     animation: fadeBotIn;
 }
 
-.bot{
-  height: 80%;
+.bot {
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,49 +68,86 @@ body{
     width: 100%;
 }
 
-.bot-text{
+.bot-text {
     font-style: italic;
-    
 }
 
-
-@keyframes fadeMainIn{
-    from{width: 0%;}
-    to{width: 70%;}
-}
-@keyframes fadeMainOut{
-    from{width: 70%;}
-    to{width: 0%;}
-}
-
-@keyframes fadeBotOut{
-   from{width: 100%}
-    to{width: 30%;}
+@keyframes fadeMainIn {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 70%;
+    }
 }
 
-@keyframes fadeBotIn{
-    from{width: 30%}
-    to{width: 100%;}
+@keyframes fadeMainOut {
+    from {
+        width: 70%;
+    }
+    to {
+        width: 0%;
+    }
 }
 
+@keyframes fadeBotOut {
+    from {
+        width: 100%
+    }
+    to {
+        width: 30%;
+    }
+}
 
+@keyframes fadeBotIn {
+    from {
+        width: 30%
+    }
+    to {
+        width: 100%;
+    }
+}
 
 
 
 h4 {
-  /*font-size: 5em;*/
-  color: white;
-  text-transform: uppercase;
+    font-size: 5em;
+    color: white;
+    text-transform: uppercase;
 }
 
-span {
-  border-right: .05em solid;
-  animation: caret 2s steps(1) infinite;
+#caret {
+    border-right: .05em solid;
+    animation: caret 2s steps(1) infinite;
 }
 
 @keyframes caret {
-  50% {
-    border-color: transparent;
-  }
+    50% {
+        border-color: transparent;
+    }
 }
 
+
+
+/*  Materialize Input */
+
+:-moz-placeholder{
+    text-align: center;
+}
+
+
+::-webkit-input-placeholder{
+    text-align: center;
+}
+
+:-ms-input-placeholder{
+    text-align: center;
+}
+
+/*                      */
+
+
+/*@media screen and (min-width: 420px) {
+    
+    
+}*/

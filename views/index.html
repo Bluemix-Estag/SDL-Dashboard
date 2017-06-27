@@ -3,37 +3,106 @@
 
 <head>
     <title>SDL - Décio</title>
+    <link href="/style/animate.css" rel="stylesheet" />
     <link href="/style/style.css" rel="stylesheet" />
     <link href="/style/materialize.css" rel="stylesheet" />
+    <meta name="mobile-web-app-capable" content="yes">
 </head>
 
 <body>
     <div class="header">Header</div>
-             <button id="btn" style="z-index:99;">Slide it</button>
-            <button id="btn-out" style="z-index:99;">Slide OUT</button>
+    <!-- <button id="btn" style="z-index:99;">Slide it</button> -->
+    <!-- <button id="btn-out" style="z-index:99;">Slide OUT</button> -->
     <div class="main-body">
-        
-        <div class="main" id="main">
-            <div class="card">
-                <p class="flow-text">Teste</p>
-            </div>
-   
+        <div class="row" id="gif-holder">
+            
         </div>
-        <div class="bot " id="bot">
+        <div class="main" id="main">
+            <div class="container hide" id="container-info1">
+                <div class="col s12 m6">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text" id="info1-content">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text" id="info1-content">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text" id="info1-content">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row hide" id="row-info2">
+                <div class="col s10 m6">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text" id="info1-content">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s10 m6">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text" id="info1-content">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="bot" id="bot">
 
 
-          <h4 class="bot-text"></h4>
+            <h4 class="bot-text"></h4>
 
-          <div class="row">
-              <div class="input-field col s12">
+            <div class="row">
+                <!--<div class="input-field col s12">-->
+                    <input type="text" id="chatInput" placeholder="Digite aqui"  onkeypress="return newEvent(event);" style="color:white"/>
+                <!--</div>-->
+            </div>
 
-                    <input id="chatInput" type="text" placeholder="Write your message here.." style="color:white;" onkeypress="return newEvent(event);"/>
 
-              </div>
-          </div>
 
-            
-            
         </div>
     </div>
 

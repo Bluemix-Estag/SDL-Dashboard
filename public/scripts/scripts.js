@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     $('#btn').click(function () {
@@ -22,15 +21,14 @@ $(document).ready(function () {
 
 function typeWriter(text, i) {
     if (i < (text.length)) {
-        document.querySelector("h4").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+        document.querySelector("h4").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true" id="caret"></span>';
         setTimeout(function () {
             typeWriter(text, i + 1)
-        }, 50);
+        }, 50); 
     }
 }
 
 function StartTextAnimation(text) {
-
     typeWriter(text, 0)
 }
 
@@ -67,6 +65,14 @@ function userMessage(message) {
                 $('#bot').removeClass('animate-bot-out');
                 $('#main').addClass('animate-main-in');
                 $('#bot').addClass('animate-bot-in');
+                setTimeout(function () {
+                    $('#container-info1').removeClass('hide');
+                    $('#containerinfo1').addClass('animated bounceInUp');
+                }, 2000);
+                setTimeout(function () {
+                    $('#row-info2').removeClass('hide');
+                    $('#row-info2').addClass('animated bounceInUp');
+                }, 4000);
             }
 
             for (var txt in text) {
@@ -128,4 +134,3 @@ function displayMessage(text, user) {
 
 
 userMessage('');
-
